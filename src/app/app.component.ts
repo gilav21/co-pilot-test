@@ -18,6 +18,9 @@ export class AppComponent {
     setTimeout(() => {
       this.store.dispatch(PetActions.setPet({pet: { name: 'Bamba', age: 2, type: 'dog' }}));
     }, 3000);
+    setTimeout(() => {
+      this.store.dispatch(PetActions.updateAge({age: 3}));
+    }, 5000);
   }
 
   ngOnInit(): void {
